@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Variables  */
+:root {
+	--background-color: #6f9a8d;
+
+	--white-color: #fff;
+	--grey-color: #777;
+	--light-grey-color: #f0f0f0;
+
+	--success-color: #2ecc71;
+	--error-color: #e74c3c;
+
+	--button-color: #16a085;
+	--button-hover-color: #1abc9c;
+}
+
+/* Global setup  */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var(--background-color);
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.container {
+	background-color: var(--white-color);
+	border-radius: 2.5rem;
+	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+	width: 40rem;
+}
+
+h2 {
+	text-align: center;
+	margin: 0 0 2rem;
+	font-size: 3rem;
+}
+
+/* Form */
+.form {
+	padding: 3rem 4rem;
+}
+
+.form-control {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	padding-bottom: 2rem;
+	position: relative;
+	text-indent: 0.9rem;
+}
+
+/* Form labels  */
+.form-control label {
+	color: var(--grey-color);
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+/* Form input boxes  */
+.form-control input {
+	border: 0.2rem solid var(--light-grey-color);
+	border-radius: 2.5rem;
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.4rem;
+}
+
+.form-control input::placeholder {
+	opacity: 0.5;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: var(--grey-color);
+}
+
+.form-control.success input {
+	border-color: var(--success-color);
+}
+
+.form-control.error input {
+	border-color: var(--error-color);
+}
+
+/* Form error message  */
+.form-control small {
+	color: var(--error-color);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+/* Submit button  */
+.form button {
+	cursor: pointer;
+	background-color: var(--button-color);
+	border: 0.2rem solid var(--button-color);
+	border-radius: 2.5rem;
+	color: #fff;
+	display: block;
+	font-size: 1.6rem;
+	padding: 1rem;
+	margin-top: 2rem;
+	width: 100%;
+	transition: all 0.2s ease;
+	outline: 0;
+	text-transform: uppercase;
+}
+
+.form button:hover {
+	background-color: var(--button-hover-color);
+	border: 0.2rem solid var(--button-hover-color);
+	transform: translateY(-0.3rem);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.form button:active {
+	transform: translateY(0.3rem);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
